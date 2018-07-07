@@ -1,0 +1,59 @@
+{
+  "name": "gun-server",
+  "version": "1.0.0",
+  "description": "GUN server with s3 persistence",
+  "private": true,
+  "license": "MIT",
+  "author": {
+    "name": "Geir Gåsodden",
+    "email": "geir.gasodden@pythonia.no",
+    "url": "https://github.com/zrrrzzt"
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alheimsins/gun-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Alheimsins/gun-server/issues"
+  },
+  "homepage": "https://github.com/Alheimsins/gun-server#readme",
+  "engines": {
+    "node": ">=10.6.0"
+  },
+  "scripts": {
+    "test": "standard && npm audit && ava",
+    "test-offline": "standard && ava",
+    "coverage": "nyc ava",
+    "coveralls": "nyc ava && nyc report --reporter=lcov && cat coverage/lcov.info | coveralls",
+    "standard-fix": "standard --fix",
+    "start": "node index.js",
+    "refresh": "rm -rf node_modules && rm package-lock.json && npm install",
+    "deploy": "now && now alias"
+  },
+  "keywords": [
+    "gun",
+    "server",
+    "s3"
+  ],
+  "now": {
+    "name": "gun-server",
+    "alias": "gundb.alheimsins.net",
+    "type": "npm",
+    "dotenv": "production.env",
+    "engines": {
+      "node": ">=10.0.0"
+    }
+  },
+  "dependencies": {
+    "aws-sdk": "2.270.1",
+    "dotenv": "6.0.0",
+    "gun": "0.9.9993"
+  },
+  "devDependencies": {
+    "ava": "0.25.0",
+    "coveralls": "3.0.2",
+    "nyc": "12.0.2",
+    "standard": "11.0.1"
+  }
+}
