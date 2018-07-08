@@ -4,6 +4,8 @@ if (process.env.NODE_ENV !== 'production') {
 const Gun = require('gun')
 const { tmpdir } = require('os')
 const port = process.env.PORT || 8000
+const { createServer } = require('http')
+const notFound = res => { res.writeHead(404, {'Content-Type': 'text/plain'}); res.write('404 Not Found\n'); res.end() }
 
 const storeConfig = () => {
   const useS3 = process.env.AWS_ACCESS_KEY_ID && process.env.AWS_SECRET_ACCESS_KEY && process.env.AWS_S3_BUCKET
@@ -25,19 +27,7 @@ const storeConfig = () => {
   }
 }
 
-const server = require('http').createServer((req, res) => {
-  // filters gun requests!
-  if (Gun.serve(req, res)) {
-    return
-  }
-  require('fs').createReadStream(require('path').join(__dirname, req.url)).on('error', function () {
-    res.writeHead(200, {'Content-Type': 'text/html'})
-    res.end(require('fs')
-      .readFileSync(require('path')
-        .join(__dirname, 'index.html')
-      ))
-  }).pipe(res)
-})
+const server = createServer((req, res) => Gun.serve(req, res) || notFound(res))
 
 const gun = Gun({
   web: server,
