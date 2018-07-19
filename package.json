@@ -1,6 +1,6 @@
 {
   "name": "gun-server",
-  "version": "1.0.3",
+  "version": "1.0.2",
   "description": "GUN server with s3 persistence",
   "private": true,
   "license": "MIT",
@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/Alheimsins/gun-server#readme",
   "engines": {
-    "node": ">=10.6.0"
+    "node": ">=10.7.0"
   },
   "scripts": {
     "test": "standard && npm audit && ava",
