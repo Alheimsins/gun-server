@@ -1,6 +1,6 @@
 {
   "name": "gun-server",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "GUN server with s3 persistence",
   "private": true,
   "license": "MIT",
