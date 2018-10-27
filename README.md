@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.com/Alheimsins/gun-server.svg?branch=master)](https://travis-ci.com/Alheimsins/gun-server)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
+
 # gun-server
 
 GUN server with s3 persistence.
