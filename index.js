@@ -5,7 +5,7 @@ const Gun = require('gun')
 const { tmpdir } = require('os')
 const port = process.env.PORT || 8000
 const { createServer } = require('http')
-const notFound = res => { res.writeHead(404, {'Content-Type': 'text/plain'}); res.write('404 Not Found\n'); res.end() }
+const notFound = res => { res.writeHead(404, { 'Content-Type': 'text/plain' }); res.write('404 Not Found\n'); res.end() }
 
 const storeConfig = () => {
   const useS3 = process.env.AWS_ACCESS_KEY_ID && process.env.AWS_SECRET_ACCESS_KEY && process.env.AWS_S3_BUCKET
@@ -36,7 +36,7 @@ const gun = Gun({
 })
 
 // Sync everything
-gun.on('out', {get: {'#': {'*': ''}}})
+gun.on('out', { get: { '#': { '*': '' } } })
 
 server.listen(port)
 console.log(`> GUN server started on port ${port}`)
