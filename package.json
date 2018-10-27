@@ -36,21 +36,6 @@
     "server",
     "s3"
   ],
-  "now": {
-    "name": "gun-server",
-    "alias": "gundb.alheimsins.net",
-    "type": "npm",
-    "dotenv": "production.env",
-    "scale": {
-      "bru1": {
-        "min": 1,
-        "max": 1
-      }
-    },
-    "engines": {
-      "node": ">=10.0.0"
-    }
-  },
   "dependencies": {
     "aws-sdk": "2.344.0",
     "dotenv": "6.1.0",
@@ -59,7 +44,7 @@
   "devDependencies": {
     "ava": "0.25.0",
     "coveralls": "3.0.2",
-    "husky": "^1.1.2",
+    "husky": "1.1.2",
     "nyc": "13.1.0",
     "standard": "12.0.1"
   },

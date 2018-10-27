@@ -1,0 +1,9 @@
+{
+  "name": "gun-server",
+  "alias": "gundb.alheimsins.net",
+  "type": "docker",
+  "dotenv": "production.env",
+  "features": {
+    "cloud": "v2"
+  }
+}
