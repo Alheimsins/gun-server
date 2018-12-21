@@ -39,7 +39,7 @@
   "dependencies": {
     "aws-sdk": "2.381.0",
     "dotenv": "6.2.0",
-    "gun": "0.9.999994"
+    "gun": "0.9.999995"
   },
   "devDependencies": {
     "ava": "1.0.1",
