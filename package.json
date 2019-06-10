@@ -42,7 +42,7 @@
     "gun": "0.2019.515"
   },
   "devDependencies": {
-    "ava": "1.4.1",
+    "ava": "2.1.0",
     "coveralls": "3.0.3",
     "husky": "2.3.0",
     "nyc": "14.1.1",
