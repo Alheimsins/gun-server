@@ -42,7 +42,7 @@
     "gun": "0.2020.401"
   },
   "devDependencies": {
-    "ava": "3.7.0",
+    "ava": "3.7.1",
     "coveralls": "3.0.11",
     "husky": "4.2.5",
     "nyc": "15.0.1",
