@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/Alheimsins/gun-server#readme",
   "engines": {
-    "node": ">=10.0.0"
+    "node": ">=14.2.0"
   },
   "scripts": {
     "test": "standard && npm audit && ava",
