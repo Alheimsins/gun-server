@@ -38,7 +38,7 @@
   ],
   "dependencies": {
     "aws-sdk": "2.1206.0",
-    "dotenv": "16.0.1",
+    "dotenv": "16.0.2",
     "gun": "0.2020.1238"
   },
   "devDependencies": {
